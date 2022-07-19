@@ -73,3 +73,12 @@ ul {
   height: 40px;
   width: auto;
 }
+
+.nav .nav__link{
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.nav .nav__link > i{
+  padding-right: 10px;
+}

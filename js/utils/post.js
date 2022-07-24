@@ -22,6 +22,13 @@ export function createPostElement(post) {
   thumbnail.addEventListener('error', () => {
     thumbnail.src = 'https://via.placeholder.com/1368x600?text=thumbnail'
   })
+
+  const divElement = liElement.firstElementChild
+  console.log(divElement)
+  divElement.addEventListener('click', () => {
+    console.log(post.id)
+    window.location.assign(`/post-detail.html?id=${post.id}`)
+  })
   return liElement
 }
 

@@ -11,7 +11,7 @@
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
-.card .card-text{
+.card .card-text {
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
@@ -20,7 +20,7 @@
   text-align: inherit;
 }
 
-.card .line-clamp-one{
+.card .line-clamp-one {
   -webkit-line-clamp: 1;
 }
 /* Zoom card image when hover on card */
@@ -95,8 +95,9 @@
 /**************
   POSTS NAV
 */
-.disabled{
-  cursor: not-allowed; 
+.disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
 }
 /* Use primary color for page link */
 .posts-nav .page-item.active .page-link {
@@ -112,4 +113,24 @@
 /* Change color for page link if page item is not active */
 .posts-nav .page-item:not(.active) .page-link:hover {
   color: var(--primary-color);
+}
+
+.search {
+  display: flex;
+  margin-bottom: 40px;
+  position: relative;
+}
+.search input {
+  text-align: center;
+}
+.btn-search {
+  position: absolute;
+  right: 0;
+}
+
+.fa-search {
+  position: absolute;
+  left: 0;
+  line-height: 40px;
+  padding: 0 20px;
 }

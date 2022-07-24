@@ -63,6 +63,7 @@ h1.with-underline::after {
 /* Reset ul style */
 ul {
   list-style-type: none;
+  padding-left: 0;
 }
 
 ::placeholder {

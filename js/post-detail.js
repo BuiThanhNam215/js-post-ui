@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import { setTextContent } from './utils'
+import { registerLightBox, setTextContent } from './utils'
 import postApi from './api/postApi'
 
 function renderPostDetails(post) {
@@ -25,6 +25,13 @@ function renderPostDetails(post) {
 }
 ;(async () => {
   try {
+    registerLightBox({
+      modalId: 'lightbox',
+      imgSelector: 'img[data-id="lightboxImg"]',
+      prevSelector: 'button[data-id="lightboxPrev"]',
+      nextSelector: 'button[data-id="lightboxNext"]',
+    })
+
     const queryParams = new URLSearchParams(window.location.search)
     const postId = queryParams.get('id')
 

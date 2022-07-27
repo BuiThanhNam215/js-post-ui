@@ -24,11 +24,22 @@ export function createPostElement(post) {
   })
 
   const divElement = liElement.firstElementChild
-  console.log(divElement)
-  divElement.addEventListener('click', () => {
-    console.log(post.id)
-    window.location.assign(`/post-detail.html?id=${post.id}`)
-  })
+
+  if (divElement) {
+    divElement.addEventListener('click', (event) => {
+      const menu = liElement.querySelector('[data-id="menu"]')
+      if (menu && menu.contains(event.target)) return
+      window.location.assign(`/post-detail.html?id=${post.id}`)
+    })
+  }
+  const editButton = liElement.querySelector('[data-id="edit"]')
+  if (editButton) {
+    editButton.addEventListener('click', (e) => {
+      // e.stopPropagation()
+      window.location.assign(`/add-edit-post.html?id=${post.id}`)
+    })
+  }
+
   return liElement
 }
 
